@@ -34,7 +34,6 @@ class Sha256
       @int_hash_value << ARR_H[i]
     end
 
-    n = padding.num_blocks
     chunked_data = @padding.output.each_slice(512)
     chunked_data.each_with_index do |chunk, index|
       @a = @int_hash_value[0].clone
